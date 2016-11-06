@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, minimum-scale=0.4, maximum-scale=2.0" />
+<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="./css/estilo.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/estilo_movil.css" media="handheld" />
+</head>
+<body>
+<div id="principal">
+<?php
+    if($finalizado == true){
+?>
+ <form id="contact_form" action="enviar_correo.php" method="POST" enctype="multipart/form-data">
+        <img src="./img/spotify.jpg">
+        <br>
+        <div class="row">
+            <input id="name" class="input" name="nombre" type="text" value="" size="30" placeholder="Nombre" required="required" /><br />
+        </div>
+        <div class="row">
+             <input type="number" name="edad" min="18" max="99" step="1" size="30" placeholder="Edad" required="required"><br />
+        </div>
+        <div class="row">
+            <input id="email" class="input" name="email" type="text" value="" size="30" placeholder="Email" required="required"/><br />
+        </div>
+        <div class="row">
+            <input id="password" class="input" name="password" type="password" value="" size="30" placeholder="Password" required="required"/><br />
+        </div>
+        <div class="row">
+            <!--<label for="message">Tu mensaje:</label><br />
+            <textarea id="message" class="input" name="mensaje" rows="7" cols="30" ></textarea><br />-->
+        </div>
+        <br>
+        <input type="hidden" name="action" value="submit"/>
+        <input id="submit_button" type="submit" value="Conseguir Premium" />
+    </form>
+    <?php
+        }
+        else{
+        echo 'Hola';
+        }
+    ?>
+</div>
+</body>
+</html>
